@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Roboto:ital,wght@0,100;1,300&family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div class="login-main">
+      <div class="welcome">
+        <h1 class="wel-head">Welcome to DocTrack</h1>
+        <p class="about">
+          Your all-in-one solution for efficient document management and
+          tracking.
+        </p>
+        <p class="about">
+          Effortless Tracking, Enhanced Productivity: Elevate Your Document
+          Management with Document Tracker!
+        </p>
+      </div>
+      <div class="login-type">
+        <h1 class="as">Login As</h1>
+        <div class="btn-group">
+          <button class="btn admin-btn">Admin</button>
+          <button class="btn user-btn">User</button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="transition-text">
+        <span>Developed by </span>
+        <span class="name"></span>
+      </div>
+    </footer>
+
+    <div class="myModal modal">
+      <div class="modal-content">
+        <h1 class="log-head">LOGIN</h1>
+        <form>
+          <input
+            type="text"
+            name="username"
+            class="input-field"
+            placeholder="Username"
+            required
+          />
+          <input
+            type="password"
+            name="password"
+            class="input-field"
+            placeholder="Password"
+            required
+          />
+          <button type="submit" class="submit-button">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      const Creater_names = ["Ankit Sankhyan", "Myla Vishal", "Utkarsh Mishra"];
+      const Creater_nameElement = document.querySelector(".name");
+
+      let Creater_index = 0;
+
+      function changeName() {
+        Creater_nameElement.style.opacity = 0;
+
+        setTimeout(function () {
+          Creater_nameElement.textContent = Creater_names[Creater_index];
+          Creater_nameElement.style.opacity = 1;
+          Creater_index = (Creater_index + 1) % Creater_names.length;
+        }, 500);
+      }
+      changeName();
+      setInterval(changeName, 3000);
+
+      var modal = document.querySelector(".modal-content");
+      var footer = document.querySelector(".footer");
+      var ad_btn = document.querySelector(".admin-btn");
+      var us_btn = document.querySelector(".user-btn");
+      var login = document.querySelector(".login-main");
+
+      ad_btn.addEventListener("click", function () {
+        login.style.display = "none";
+        footer.style.display = "none";
+        modal.style.display = "block";
+      });
+      us_btn.addEventListener("click", function () {
+        login.style.display = "none";
+        footer.style.display = "none";
+        modal.style.display = "block";
+      });
+    </script>
+  </body>
+</html>

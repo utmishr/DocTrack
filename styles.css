@@ -8,8 +8,6 @@ html {
 body {
   margin: 0;
   padding: 0;
-
-  /* vertically center the child */
   background-image: url(background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -89,8 +87,8 @@ body {
 
 .transition-text {
   margin-top: -10px;
-  width: 250px; /* Adjust the width as needed */
-  height: 30px; /* Adjust the height as needed */
+  width: 250px;
+  height: 30px;
   font-family: "Poppins", sans-serif;
   color: rgb(218, 207, 236);
 }
@@ -151,7 +149,7 @@ form {
   background-color: #45a049;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 900px) {
   .login-main {
     margin: 20px;
     grid-template-columns: 1fr;
@@ -196,7 +194,7 @@ form {
   }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 650px) {
   .login-main {
     margin: 10px;
   }
@@ -237,5 +235,53 @@ form {
   h1 {
     margin-bottom: 20px;
     font-size: 24px;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .login-main {
+    margin: 5px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 10px;
+  }
+
+  .welcome,
+  .login-type {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .as {
+    padding-top: 10px;
+    font-size: 24px;
+  }
+
+  .btn-group {
+    padding: 0;
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .myModal {
+    margin-top: 20px;
+  }
+
+  .modal-content {
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  h1 {
+    margin-bottom: 10px;
+    font-size: 18px;
   }
 }

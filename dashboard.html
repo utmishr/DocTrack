@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DocTrac - Document Tracking System</title>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Roboto:ital,wght@0,100;1,300&family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="dashboard-style.css" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header class="header">
+      <div class="logo">DocTrac</div>
+      <div class="title">
+        <p>Document Tracking System</p>
+      </div>
+      <div class="profile">
+        <img src="profile.jpg" alt="Profile Photo" width="40" height="40" />
+        <div class="dropdown">
+          <a href="#">Logout</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <div class="content">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <div class="buttons">
+          <div class="btn" onclick="showDashboard()">Dashboard</div>
+          <div class="btn" onclick="showProfile()">Profile</div>
+          <div class="btn" onclick="showSettings()">Setting</div>
+        </div>
+        <div class="icon">
+          <div class="div-icon">
+            <a href="#" onclick="showDashboard()"
+              ><ion-icon class="icons" name="clipboard-outline"></ion-icon
+            ></a>
+          </div>
+          <div class="div-icon">
+            <a href="#" onclick="showProfile()"
+              ><ion-icon class="icons" name="person-outline"></ion-icon
+            ></a>
+          </div>
+          <div class="div-icon">
+            <a href="#" onclick="showSettings()"
+              ><ion-icon class="icons" name="settings-outline"></ion-icon
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Section -->
+      <div class="main" id="main-section">
+        <h2>Welcome to DocTrac</h2>
+        <p>This is the dashboard section.</p>
+      </div>
+    </div>
+
+    <script>
+      // JavaScript Code
+      function showDashboard() {
+        document.getElementById("main-section").innerHTML = `
+      <h2>Welcome to DocTrac</h2>
+      <p>This is the dashboard section.</p>
+    `;
+      }
+
+      function showProfile() {
+        document.getElementById("main-section").innerHTML = `
+      <h2>User Profile</h2>
+      <p>This is the profile section.</p>
+    `;
+      }
+
+      function showSettings() {
+        document.getElementById("main-section").innerHTML = `
+      <h2>Settings</h2>
+      <p>This is the settings section.</p>
+    `;
+      }
+    </script>
+  </body>
+</html>

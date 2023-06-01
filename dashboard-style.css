@@ -1,0 +1,153 @@
+/* General Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0;
+}
+
+/* Header Styles */
+.header {
+  background: linear-gradient(to bottom, #ad40e4, #7f2ecb);
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .logo {
+  font-size: 2.4rem;
+}
+
+.header .title {
+  font-size: 1.2rem;
+}
+
+.header .profile {
+  position: relative;
+}
+
+.header .profile .dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 0.5rem;
+  display: none;
+}
+
+.header .profile:hover .dropdown {
+  display: block;
+}
+
+.header .profile .dropdown a {
+  display: block;
+  padding: 0.5rem;
+  color: #333;
+  text-decoration: none;
+}
+
+.header .profile .dropdown a:hover {
+  background-color: #f5f5f5;
+}
+
+/* Main Content Styles */
+.content {
+  flex: 1;
+  display: flex;
+  margin: 2rem;
+}
+
+.sidebar {
+  width: 18%;
+  background: linear-gradient(to bottom, #ad40e4, #7f2ecb);
+  color: #fff;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.sidebar .btn {
+  color: #fff;
+  padding: 1rem;
+  font-size: 1.2rem;
+  /* margin-bottom: 1rem; */
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.sidebar .icons {
+  display: none;
+  margin: 2rem;
+}
+
+.sidebar .icons a {
+  display: block;
+  /* margin-bottom: 1rem; */
+  padding: 0;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+}
+
+.icon div:nth-of-type(even) {
+  background: linear-gradient(to right, #8b15c6, #8a2be2);
+}
+
+.buttons div:nth-of-type(even) {
+  background: linear-gradient(to right, #8b15c6, #8a2be2);
+}
+
+.sidebar .btn:hover {
+  background: linear-gradient(to right, #580ba0, #c402c4);
+}
+
+.div-icon:hover {
+  background: linear-gradient(to right, #580ba0, #c402c4);
+}
+
+.icons {
+  color: #fff;
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+.main {
+  flex: 1;
+  background-color: #fff;
+  padding: 1rem;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 860px) {
+  .sidebar .btn {
+    display: none;
+  }
+
+  .sidebar .icons {
+    display: block;
+  }
+
+  .header .title {
+    display: none;
+  }
+}

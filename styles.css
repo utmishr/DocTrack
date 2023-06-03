@@ -178,19 +178,15 @@ form {
     width: 100%;
   }
 
-  .myModal {
-    margin-top: 60px;
-  }
-
-  .modal-content {
-    max-width: 100%;
-    height: auto;
-    margin: 0;
-    border-radius: 0;
-  }
-
   h1 {
     margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    width: 90%;
+    margin: 10% auto;
   }
 }
 
@@ -221,20 +217,14 @@ form {
     width: 100%;
   }
 
-  .myModal {
-    margin-top: 40px;
-  }
-
-  .modal-content {
-    max-width: 100%;
-    height: auto;
-    margin: 0;
-    border-radius: 0;
-  }
-
   h1 {
     margin-bottom: 20px;
     font-size: 24px;
+  }
+
+  .modal-content {
+    width: 80%;
+    margin: 10% auto;
   }
 }
 
@@ -269,19 +259,13 @@ form {
     width: 100%;
   }
 
-  .myModal {
-    margin-top: 20px;
-  }
-
-  .modal-content {
-    max-width: 100%;
-    height: auto;
-    margin: 0;
-    border-radius: 0;
-  }
-
   h1 {
     margin-bottom: 10px;
     font-size: 18px;
+  }
+
+  .modal-content {
+    width: 60%;
+    margin: 10% auto;
   }
 }

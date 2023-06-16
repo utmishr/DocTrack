@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Web Page</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        font-size: 62.5%;
+        font-family: 'Poppins', sans-serif;
+      }
+      body {
+        margin: 0;
+        background-color: #031639;
+        padding: 0;
+        font-size: 62.5%; /* Define 1rem = 10px */
+      }
+
+      .header {
+        position: sticky;
+        z-index: 4;
+        top: 0;
+      }
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #000b1f;
+        color: #fff;
+        height: 8rem;
+      }
+
+      .logo-img {
+        width: 7rem;
+        height: 8rem;
+      }
+
+      .company-name {
+        margin-left: 1rem;
+        font-size: 4.8rem;
+      }
+
+      .search-bar {
+        flex-grow: 1;
+        margin-right: 1rem;
+        text-align: right;
+        position: relative;
+      }
+
+      .search-bar input {
+        width: 30rem;
+        padding: 0.8rem;
+        border-radius: 2rem;
+        border: none;
+        outline: none;
+        background: linear-gradient(to right, #1e2749, #18353f);
+        color: #ffffff;
+      }
+
+      .side-img {
+        height: 3rem;
+        width: 3rem;
+        margin-left: 2rem;
+      }
+
+      .sidebar-list {
+        background-color: #000b1f;
+        height: 100%;
+        width: 7rem;
+        position: fixed;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .sidebar {
+        padding: 1rem 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        gap: 3rem;
+      }
+
+      .sidebar li:last-child {
+        position: absolute;
+        bottom: 10rem;
+      }
+
+      .sidebar li:hover {
+        background-color: #333;
+      }
+
+      .main-content {
+        background-color: #031639;
+        height: 100vh;
+        width: 100%;
+        margin: 0;
+      }
+
+      .content {
+        margin-left: 9rem;
+        color: #ffffff;
+        /* background-color: #0A204A; */
+      }
+    </style>
+  </head>
+  <body onload="showDashboard()">
+    <!-- onload="showDashboard()" -->
+    <header class="header">
+      <div class="navbar">
+        <div class="logo"><img src="../img/logo.JPG" class="logo-img" /></div>
+        <div class="company-name">Doctrac</div>
+        <div class="search-bar">
+          <input type="text" id="searchInput" placeholder="Search Documents" />
+        </div>
+      </div>
+    </header>
+
+    <section class="main">
+      <div class="sidebar-list">
+        <ul class="sidebar">
+          <li>
+            <img
+              class="side-img"
+              src="../img/layout.png"
+              alt="dashboard"
+              onclick="showDashboard()"
+            />
+          </li>
+          <li>
+            <img
+              class="side-img"
+              src="../img/profile.png"
+              alt="profile"
+              onclick="showProfile()"
+            />
+          </li>
+          <li>
+            <img
+              class="side-img"
+              src="../img/plus.png"
+              alt="create"
+              onclick="showCreate()"
+            />
+          </li>
+          <li>
+            <img
+              class="side-img"
+              src="../img/cogwheel.png"
+              alt="setting"
+              onclick="showSettinng()"
+            />
+          </li>
+          <li>
+            <img
+              class="side-img"
+              src="../img/logout.png"
+              alt="logout"
+              onclick="showLogout()"
+            />
+          </li>
+        </ul>
+      </div>
+      <section class="main-content">
+        <section class="content"></section>
+      </section>
+    </section>
+    <script>
+      function showDashboard() {
+        fetch('dashboard.html')
+          .then((response) => response.text())
+          .then((html) => {
+            document.querySelector('.content').innerHTML = html;
+          })
+          .catch((error) => {
+            console.error('Error:', error);
+          });
+      }
+
+      function showProfile() {
+        fetch('profile.html')
+          .then((response) => response.text())
+          .then((html) => {
+            document.querySelector('.content').innerHTML = html;
+          })
+          .catch((error) => {
+            console.error('Error:', error);
+          });
+      }
+
+      function showCreate() {
+        fetch('create.html')
+          .then((response) => response.text())
+          .then((html) => {
+            document.querySelector('.content').innerHTML = html;
+          })
+          .catch((error) => {
+            console.error('Error:', error);
+          });
+      }
+
+      function showSettinng() {
+        fetch('setting.html')
+          .then((response) => response.text())
+          .then((html) => {
+            document.querySelector('.content').innerHTML = html;
+          })
+          .catch((error) => {
+            console.error('Error:', error);
+          });
+      }
+
+      function showLogout() {
+        fetch('logout.html')
+          .then((response) => response.text())
+          .then((html) => {
+            document.querySelector('.content').innerHTML = html;
+          })
+          .catch((error) => {
+            console.error('Error:', error);
+          });
+      }
+    </script>
+  </body>
+</html>

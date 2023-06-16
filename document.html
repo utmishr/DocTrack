@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        color: aliceblue;
+      }
+      html {
+        background-color: #121b2f;
+        font-size: 62.5%;
+        font-family: 'Poppins', sans-serif;
+      }
+      .head {
+        display: flex;
+        background-color: #102548;
+        border-radius: 1.2rem;
+        justify-content: space-between;
+        margin: 2rem 3.6rem;
+      }
+      .title {
+        padding: 2rem;
+        /* margin: 1rem 2rem;
+        margin-bottom: -1rem; */
+        font-size: 2.4rem;
+      }
+      .project-name {
+        padding: 0 2rem;
+        /* margin: 0 2rem; */
+        margin-bottom: 1rem;
+        font-size: 1.6rem;
+      }
+
+      .checks {
+        display: flex;
+        justify-content: space-between;
+        margin: -0.5rem 6rem;
+      }
+
+      .checkmark {
+        padding: 2rem 2rem;
+        margin-bottom: 2.4rem;
+      }
+
+      .on-doc {
+        font-size: 2rem;
+      }
+
+      .check {
+        margin-left: 1rem;
+        transform: scale(1.5);
+      }
+
+      .do-desc {
+        font-size: 2.4em;
+        padding-left: 1.5rem;
+        margin-bottom: 2rem;
+        font-weight: 300;
+        margin-left: 3.6rem;
+      }
+
+      .main-doc-des {
+        border-radius: 8px;
+        background: linear-gradient(
+          rgba(246, 221, 221, 0.2),
+          rgba(246, 221, 221, 0.08)
+        );
+        backdrop-filter: blur(10px);
+        padding-top: 1rem;
+        padding-left: 1rem;
+        margin-left: 0rem;
+        width: 85%;
+        margin-left: 10rem;
+        margin-bottom: 3rem;
+      }
+
+      .para-desc {
+        font-size: 1.6rem;
+        padding: 3rem;
+        line-height: 2.4rem;
+      }
+
+      .timeline {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .li {
+        transition: all 200ms ease-in;
+      }
+
+      .timestamp {
+        margin-bottom: 20px;
+        padding: 0px 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-weight: 100;
+      }
+
+      .status {
+        padding: 0px 40px;
+        display: flex;
+        justify-content: center;
+        border-top: 2px solid #d6dce0;
+        position: relative;
+        transition: all 200ms ease-in;
+      }
+
+      .status h4 {
+        font-weight: 600;
+        margin-top: 1.5rem;
+      }
+
+      .status:before {
+        content: '';
+        width: 25px;
+        height: 25px;
+        background-color: white;
+        border-radius: 25px;
+        border: 1px solid #ddd;
+        position: absolute;
+        top: -15px;
+        left: 42%;
+        transition: all 200ms ease-in;
+      }
+
+      .li.complete .status {
+        border-top: 2px solid #66dc71;
+      }
+
+      .li.complete .status:before {
+        background-color: #66dc71;
+        border: none;
+        transition: all 200ms ease-in;
+      }
+
+      .li.complete .status h4 {
+        color: #66dc71;
+      }
+
+      /* Form Styles */
+      #add-entry-form {
+        display: flex;
+        border: none;
+        color: #fff;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+      }
+
+      #add-entry-form input[type='text'] {
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0.1);
+        margin-bottom: 10px;
+
+        color: #fff;
+        border-radius: 4px;
+        border: none;
+
+        width: 300px;
+      }
+
+      #add-entry-form button[type='submit'] {
+        padding: 10px 20px;
+        margin-bottom: 2rem;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      #add-entry-form button[type='submit']:hover {
+        background-color: #45a049;
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Roboto:ital,wght@0,100;1,300&family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="head">
+      <div class="titles">
+        <p class="title">Title</p>
+        <p class="project-name" .>Project Name</p>
+      </div>
+      <div class="created">
+        <p class="title">Created By</p>
+        <p class="project-name">Dr. Santosh Singh Rathore</p>
+      </div>
+      <div class="Status">
+        <p class="title">State</p>
+        <p class="project-name">Online</p>
+      </div>
+    </div>
+    <div class="checks">
+      <div class="checkmark">
+        <label for="rec" class="on-doc">Received</label>
+        <input
+          type="checkbox"
+          id="rec"
+          name="interest"
+          value="rec"
+          class="check"
+        />
+      </div>
+      <div class="checkmark">
+        <label for="for" class="on-doc">Forwarded</label>
+        <input
+          type="checkbox"
+          id="for"
+          name="interest"
+          value="for"
+          class="check"
+        />
+      </div>
+      <div class="checkmark">
+        <label for="apr" class="on-doc">Approved</label>
+        <input
+          type="checkbox"
+          id="apr"
+          name="interest"
+          value="apr"
+          class="check"
+        />
+      </div>
+    </div>
+    <div class="doc-desc">
+      <h2 class="do-desc">Description</h2>
+      <div class="main-doc-des">
+        <p class="para-desc">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta
+          possimus voluptates fugiat iusto voluptatem molestiae ratione
+          dignissimos maxime tenetur repellendus sit perspiciatis necessitatibus
+          ipsam quod nihil, architecto cumque maiores aut. Lorem ipsum dolor sit
+          amet consectetur adipisicing elit. Atque, iusto ex! Vel praesentium
+          voluptas labore ut similique explicabo assumenda voluptate repellendus
+          quasi reprehenderit, molestiae rem, quis earum? Beatae, architecto
+          nobis?Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+          Cupiditate consectetur in, nihil hic suscipit explicabo eum atque est.
+          Corporis consectetur iusto amet debitis officia voluptate illum.
+          Voluptatum culpa facere. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Ducimus deleniti provident adipisci consectetur
+          quibusdam veniam. Reiciendis quibusdam consectetur facere esse quasi
+          exercitationem animi at iste suscipit, accusamus, recusandae aut.
+          Alias.
+        </p>
+      </div>
+    </div>
+    <div class="Time">
+      <h2 class="do-desc">Timeline</h2>
+      <ul class="timeline" id="timeline">
+        <li class="li complete">
+          <div class="timestamp">
+            <span class="date">11/15/2014</span>
+          </div>
+          <div class="status">
+            <h4>Santosh Singh</h4>
+          </div>
+        </li>
+      </ul>
+      <form
+        id="add-entry-form"
+        onsubmit="addTimelineEntry(event)"
+        autocomplete="off"
+      >
+        <input
+          type="text"
+          id="name-input"
+          placeholder="Enter a name"
+          autocomplete="off"
+        />
+        <input
+          type="text"
+          id="date-input"
+          placeholder="Enter a date (e.g., 11/15/2022)"
+          autocomplete="off"
+        />
+        <button type="submit">Tag</button>
+      </form>
+    </div>
+    <script>
+      function addTimelineEntry(event) {
+        event.preventDefault(); // Prevent form submission
+
+        // Get the entered name and date values from the input fields
+        const nameInput = document.getElementById('name-input');
+        const name = nameInput.value;
+
+        const dateInput = document.getElementById('date-input');
+        const date = dateInput.value;
+
+        if (name.trim() !== '' && date.trim() !== '') {
+          // Create a new timeline entry
+          const timeline = document.getElementById('timeline');
+
+          const newEntry = document.createElement('li');
+          newEntry.className = 'li complete';
+
+          const timestamp = document.createElement('div');
+          timestamp.className = 'timestamp';
+          timestamp.innerHTML = `<span class="date">${date}</span>`;
+
+          const status = document.createElement('div');
+          status.className = 'status';
+          status.innerHTML = `<h4>${name}</h4>`;
+
+          newEntry.appendChild(timestamp);
+          newEntry.appendChild(status);
+
+          timeline.appendChild(newEntry);
+
+          // Clear the input fields
+          nameInput.value = '';
+          dateInput.value = '';
+        }
+      }
+    </script>
+  </body>
+</html>

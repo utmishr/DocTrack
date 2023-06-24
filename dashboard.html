@@ -1,136 +1,9 @@
 <!DOCTYPE html>
   <head>
     <title>Document</title>
-    <style>
-      *{
-        margin: 0;
-      }
-
-      html{
-        font-size: 62.5%;
-        font-family: 'Poppins', sans-serif;
-      }
-
-      .title{
-        padding-top: 2rem;
-        padding-left: 1rem;
-        font-size:3rem;
-        font-weight: 300;
-        margin-bottom: 2rem;
-        margin-left: 2rem;
-        display: block;
-      }
-
-      
-      .document-card {
-      width: 22rem;
-      border-radius: 5px;
-      padding: 2rem;
-      margin-bottom: 1rem;
-      border-radius: 8px;
-      background: linear-gradient(
-          rgba(246, 221, 221, 0.2),
-          rgba(246, 221, 221, 0.08)
-      );
-      backdrop-filter: blur(10px);
-      margin-left: 4rem;
-      margin-bottom: 3rem;
-    }
-
-    .document-name {
-      font-size: 1.8rem;
-      font-weight: 500;
-    }
-
-    .document-author {
-      font-size: 1.2rem;
-      color: #7c7c7c;
-      margin-bottom: 1rem;
-    }
-
-    .document-description {
-      font-size: 1.5rem;
-      line-height: 1.4;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      display: -webkit-box;
-      -webkit-line-clamp: 4;
-      -webkit-box-orient: vertical;
-    }
-
-    .whole-section{
-      display: flex;
-    }
-
-
     
-    .document-section{
-      flex: 4;
-    }
-
-
-    .tagged-doc{
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-      align-items: flex-start;
-    }
-
-    .forwarded-documents{
-      flex: 1;
-      background-color: #0e012b;
-    }
-
-    .list-container {
-      display: flex;
-      flex-direction: column;
-      background-color: #0c2243;
-      padding: 20px;
-    }
-    
-    .list-item {
-      display: flex;
-      align-items: center;
-      padding: 10px;
-      margin-bottom: 10px;
-      background-color: #153968;
-      cursor: pointer;
-      transition: background-color 0.3s;
-      animation: fade-in 0.5s;
-      text-decoration: none;
-    }
-    
-    .list-item:hover {
-      background-color: #305e8e;
-    }
-    
-    .list-item:hover .doc-title,
-    .list-item:hover .author-name {
-      color: #ffffff;
-    }
-    
-    .doc-title,
-    .author-name {
-      margin: 0;
-      color: #ecf4fc;
-      transition: color 0.3s;
-    }
-    
-    .doc-title {
-      font-size: 18px;
-      font-weight: bold;
-      margin-bottom: 5px;
-    }
-    
-    .author-name {
-      font-size: 14px;
-    }
-    
-    @keyframes fade-in {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    </style>
+      <link rel="stylesheet" href="dashboard_styles.css">
+   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Roboto:ital,wght@0,100;1,300&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -165,46 +38,6 @@
             </div>
             <div class="document-card">
               <h2 class="document-name">Document 3</h2>
-              <p class="document-author">Author: John Doe</p>
-              <p class="document-description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Sed euismod lacus non placerat tincidunt. Sed tristique
-                ligula quis consequat lobortis.
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo labore dolore quam dolores. Vero odit quisquam provident dolores laborum! A qui illo excepturi praesentium nihil saepe explicabo? Dolore, nihil dignissimos.
-              </p>
-            </div>
-            <div class="document-card">
-              <h2 class="document-name">Document 4</h2>
-              <p class="document-author">Author: John Doe</p>
-              <p class="document-description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Sed euismod lacus non placerat tincidunt. Sed tristique
-                ligula quis consequat lobortis.
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo labore dolore quam dolores. Vero odit quisquam provident dolores laborum! A qui illo excepturi praesentium nihil saepe explicabo? Dolore, nihil dignissimos.
-              </p>
-            </div>
-            <div class="document-card">
-              <h2 class="document-name">Document 5</h2>
-              <p class="document-author">Author: John Doe</p>
-              <p class="document-description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Sed euismod lacus non placerat tincidunt. Sed tristique
-                ligula quis consequat lobortis.
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo labore dolore quam dolores. Vero odit quisquam provident dolores laborum! A qui illo excepturi praesentium nihil saepe explicabo? Dolore, nihil dignissimos.
-              </p>
-            </div>
-            <div class="document-card">
-              <h2 class="document-name">Document 6</h2>
-              <p class="document-author">Author: John Doe</p>
-              <p class="document-description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Sed euismod lacus non placerat tincidunt. Sed tristique
-                ligula quis consequat lobortis.
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo labore dolore quam dolores. Vero odit quisquam provident dolores laborum! A qui illo excepturi praesentium nihil saepe explicabo? Dolore, nihil dignissimos.
-              </p>
-            </div>
-            <div class="document-card">
-              <h2 class="document-name">Document 7</h2>
               <p class="document-author">Author: John Doe</p>
               <p class="document-description">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -248,46 +81,8 @@
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo labore dolore quam dolores. Vero odit quisquam provident dolores laborum! A qui illo excepturi praesentium nihil saepe explicabo? Dolore, nihil dignissimos.
               </p>
             </div>
-            <div class="document-card">
-              <h2 class="document-name">Document 4</h2>
-              <p class="document-author">Author: John Doe</p>
-              <p class="document-description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Sed euismod lacus non placerat tincidunt. Sed tristique
-                ligula quis consequat lobortis.
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo labore dolore quam dolores. Vero odit quisquam provident dolores laborum! A qui illo excepturi praesentium nihil saepe explicabo? Dolore, nihil dignissimos.
-              </p>
-            </div>
-            <div class="document-card">
-              <h2 class="document-name">Document 5</h2>
-              <p class="document-author">Author: John Doe</p>
-              <p class="document-description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Sed euismod lacus non placerat tincidunt. Sed tristique
-                ligula quis consequat lobortis.
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo labore dolore quam dolores. Vero odit quisquam provident dolores laborum! A qui illo excepturi praesentium nihil saepe explicabo? Dolore, nihil dignissimos.
-              </p>
-            </div>
-            <div class="document-card">
-              <h2 class="document-name">Document 6</h2>
-              <p class="document-author">Author: John Doe</p>
-              <p class="document-description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Sed euismod lacus non placerat tincidunt. Sed tristique
-                ligula quis consequat lobortis.
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo labore dolore quam dolores. Vero odit quisquam provident dolores laborum! A qui illo excepturi praesentium nihil saepe explicabo? Dolore, nihil dignissimos.
-              </p>
-            </div>
-            <div class="document-card">
-              <h2 class="document-name">Document 7</h2>
-              <p class="document-author">Author: John Doe</p>
-              <p class="document-description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Sed euismod lacus non placerat tincidunt. Sed tristique
-                ligula quis consequat lobortis.
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo labore dolore quam dolores. Vero odit quisquam provident dolores laborum! A qui illo excepturi praesentium nihil saepe explicabo? Dolore, nihil dignissimos.
-              </p>
-            </div>
+            
+
           </div>
         </div>
         <div class="forwarded-documents">
@@ -316,5 +111,6 @@
           </div>
         </div>
       </section>
+      <script src="dashboard_script.js"></script>
   </body>
 </html>

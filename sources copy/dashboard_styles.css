@@ -1,0 +1,287 @@
+* {
+  box-sizing: border-box;
+  color: #fff;
+  margin:0;
+
+}
+html {
+  font-size: 62.5%;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  margin: 0;
+  background-color: #031639;
+  padding: 0;
+  font-size: 62.5%; /* Define 1rem = 10px */
+}
+
+.header {
+  position: sticky;
+  z-index: 4;
+  top: 0;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000b1f;
+  color: #fff;
+  height: 8rem;
+}
+
+.logo-img {
+  width: 7rem;
+  height: 8rem;
+}
+
+.company-name {
+  margin-left: 1rem;
+  font-size: 4.8rem;
+}
+
+.search-bar {
+  flex-grow: 1;
+  margin-right: 1rem;
+  text-align: right;
+  position: relative;
+}
+
+.search-bar input {
+  width: 30rem;
+  padding: 0.8rem;
+  border-radius: 2rem;
+  border: none;
+  outline: none;
+  background: linear-gradient(to right, #1e2749, #18353f);
+  color: #ffffff;
+}
+
+.side-img {
+  height: 3rem;
+  width: 3rem;
+  margin-left: 2rem;
+}
+
+.sidebar-list {
+  background-color: #000b1f;
+  height: 100%;
+  width: 7rem;
+  position: fixed;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar {
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 3rem;
+}
+
+.sidebar li:last-child {
+  position: absolute;
+  bottom: 10rem;
+}
+
+/* .side-img:hover {
+  background-color: #333;
+} */
+
+.main-content {
+  background-color: #031639;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+}
+
+.content {
+  margin-left: 9rem;
+  color: #ffffff;
+  /* background-color: #0A204A; */
+}
+
+.whole-section{
+  margin-left: 10rem;
+}
+
+.title{
+  padding-top: 2rem;
+  padding-left: 1rem;
+  font-size:3rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+  display: block;
+}
+
+
+.document-card {
+width: 22rem;
+border-radius: 5px;
+text-decoration: none;
+padding: 2rem;
+margin-bottom: 1rem;
+border-radius: 8px;
+background: linear-gradient(
+    rgba(246, 221, 221, 0.2),
+    rgba(246, 221, 221, 0.08)
+);
+backdrop-filter: blur(10px);
+margin-left: 4rem;
+margin-bottom: 3rem;
+}
+
+.document-card:hover {
+background-color: #002954;
+}
+
+.document-name {
+font-size: 1.8rem;
+font-weight: 500;
+}
+
+.document-author {
+font-size: 1.2rem;
+color: #7c7c7c;
+margin-bottom: 1rem;
+}
+
+.document-description {
+font-size: 1.5rem;
+line-height: 1.4;
+overflow: hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-line-clamp: 4;
+-webkit-box-orient: vertical;
+}
+
+.whole-section{
+display: flex;
+}
+
+
+
+.document-section{
+flex: 4;
+}
+
+
+.tagged-doc{
+display: flex;
+flex-wrap: wrap;
+justify-content: flex-start;
+align-items: flex-start;
+}
+
+.created-doc{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  }
+
+.forwarded-documents{
+flex: 1;
+/* height: 100vh; */
+flex-grow: 1;
+background-color: #0e012b;
+}
+
+.list-container {
+display: flex;
+flex-direction: column;
+background-color: #0c2243;
+padding: 20px;
+}
+
+.list-item {
+display: flex;
+align-items: center;
+padding: 10px;
+margin-bottom: 10px;
+background-color: #153968;
+cursor: pointer;
+transition: background-color 0.3s;
+animation: fade-in 0.5s;
+text-decoration: none;
+}
+
+.list-item:hover {
+background-color: #305e8e;
+}
+
+.list-item:hover .doc-title,
+.list-item:hover .author-name {
+color: #ffffff;
+}
+
+.doc-title,
+.author-name {
+margin: 0;
+color: #ecf4fc;
+transition: color 0.3s;
+}
+
+.doc-title {
+font-size: 18px;
+font-weight: bold;
+margin-bottom: 5px;
+}
+
+.author-name {
+font-size: 14px;
+}
+
+@keyframes fade-in {
+from { opacity: 0; }
+to { opacity: 1; }
+}
+
+
+/* Existing CSS code */
+
+.tagged-doc,
+.created-doc {
+  max-height: 400px; /* Set the maximum height for the scrollable container */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Customize scrollbar track */
+/* Customize scrollbar track */
+/* Customize scrollbar track */
+.tagged-doc::-webkit-scrollbar-track,
+.created-doc::-webkit-scrollbar-track {
+  background-color: #061936;
+}
+
+/* Customize scrollbar thumb */
+.tagged-doc::-webkit-scrollbar-thumb,
+.created-doc::-webkit-scrollbar-thumb {
+  background-color: #305e8e;
+  width: 4px; /* Adjust the width of the scrollbar thumb */
+}
+
+/* On hover, change scrollbar thumb color */
+.tagged-doc::-webkit-scrollbar-thumb:hover,
+.created-doc::-webkit-scrollbar-thumb:hover {
+  background-color: #153968;
+}
+
+/* Customize scrollbar */
+.tagged-doc::-webkit-scrollbar,
+.created-doc::-webkit-scrollbar {
+  width: 4px; /* Adjust the width of the scrollbar */
+  background-color: transparent; /* Set scrollbar background color */
+}
+
+/* Customize scrollbar corner */
+.tagged-doc::-webkit-scrollbar-corner,
+.created-doc::-webkit-scrollbar-corner {
+  background-color: transparent; /* Set scrollbar corner background color */
+}
+
+
+
+/* Rest of the CSS code */

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Document</title>
+  <link rel="stylesheet" href="dashboard_styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Roboto:ital,wght@0,100;1,300&family=Rubik:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <!-- onload="showDashboard()" -->
+  <header class="header">
+    <div class="navbar">
+      <div class="logo"><img src="../img/logo.JPG" class="logo-img" /></div>
+      <div class="company-name">Doctrac</div>
+      <div class="search-bar">
+        <!-- <input type="text" id="searchInput" placeholder="Search Documents" /> -->
+        <input type="text" id="searchInput" placeholder="Search Documents" oninput="searchDocuments()" />
+      </div>
+    </div>
+  </header>
+
+  <section class="main">
+    <div class="sidebar-list">
+      <ul class="sidebar">
+        <li>
+          <a href="dashboard.html">
+            <img class="side-img" src="../img/layout.png" alt="dashboard" />
+          </a>
+        </li>
+        <li>
+          <a href="profile.html">
+            <img class="side-img" src="../img/profile.png" alt="profile" />
+          </a>
+        </li>
+        <li>
+          <a href="create.html">
+            <img class="side-img" src="../img/plus.png" alt="create" />
+          </a>
+        </li>
+        <li>
+          <a href="setting.html">
+            <img class="side-img" src="../img/cogwheel.png" alt="setting" />
+          </a>
+        </li>
+        <li>
+          <a href="logout.html">
+            <img class="side-img" src="../img/logout.png" alt="logout" />
+          </a>
+        </li>
+      </ul>
+    </div>
+    <section class="whole-section">
+      <div class="document-section">
+        <h1 class="title">
+          Tagged Documents
+        </h1>
+        <div class="scrollable-container">
+          <div class="tagged-doc">
+            <a href="https://example.com" target="_blank" class="document-card">
+              <h2 class="document-name">Document 1</h2>
+              <p class="document-author">Author: John Doe</p>
+              <p class="document-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Sed euismod lacus non placerat tincidunt. Sed tristique
+                ligula quis consequat lobortis.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo labore dolore quam dolores. Vero
+                odit quisquam provident dolores laborum! A qui illo excepturi praesentium nihil saepe explicabo? Dolore,
+                nihil dignissimos.
+              </p>
+            </a>
+            <a href="https://example.com" target="_blank" class="document-card">
+              <h2 class="document-name">Document 1</h2>
+              <p class="document-author">Author: John Doe</p>
+              <p class="document-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Sed euismod lacus non placerat tincidunt. Sed tristique
+                ligula quis consequat lobortis.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo labore dolore quam dolores. Vero
+                odit quisquam provident dolores laborum! A qui illo excepturi praesentium nihil saepe explicabo? Dolore,
+                nihil dignissimos.
+              </p>
+            </a>
+            <a href="https://example.com" target="_blank" class="document-card">
+              <h2 class="document-name">Document 1</h2>
+              <p class="document-author">Author: John Doe</p>
+              <p class="document-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Sed euismod lacus non placerat tincidunt. Sed tristique
+                ligula quis consequat lobortis.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo labore dolore quam dolores. Vero
+                odit quisquam provident dolores laborum! A qui illo excepturi praesentium nihil saepe explicabo? Dolore,
+                nihil dignissimos.
+              </p>
+            </a>
+            <a href="https://example.com" target="_blank" class="document-card">
+              <h2 class="document-name">Document 1</h2>
+              <p class="document-author">Author: John Doe</p>
+              <p class="document-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Sed euismod lacus non placerat tincidunt. Sed tristique
+                ligula quis consequat lobortis.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo labore dolore quam dolores. Vero
+                odit quisquam provident dolores laborum! A qui illo excepturi praesentium nihil saepe explicabo? Dolore,
+                nihil dignissimos.
+              </p>
+            </a>
+            <a href="https://example.com" target="_blank" class="document-card">
+              <h2 class="document-name">Document 1</h2>
+              <p class="document-author">Author: John Doe</p>
+              <p class="document-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Sed euismod lacus non placerat tincidunt. Sed tristique
+                ligula quis consequat lobortis.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo labore dolore quam dolores. Vero
+                odit quisquam provident dolores laborum! A qui illo excepturi praesentium nihil saepe explicabo? Dolore,
+                nihil dignissimos.
+              </p>
+            </a>
+            <a href="https://example.com" target="_blank" class="document-card">
+              <h2 class="document-name">Document 1</h2>
+              <p class="document-author">Author: John Doe</p>
+              <p class="document-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Sed euismod lacus non placerat tincidunt. Sed tristique
+                ligula quis consequat lobortis.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo labore dolore quam dolores. Vero
+                odit quisquam provident dolores laborum! A qui illo excepturi praesentium nihil saepe explicabo? Dolore,
+                nihil dignissimos.
+              </p>
+            </a>
+            <a href="https://example.com" target="_blank" class="document-card">
+              <h2 class="document-name">Document 1</h2>
+              <p class="document-author">Author: John Doe</p>
+              <p class="document-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Sed euismod lacus non placerat tincidunt. Sed tristique
+                ligula quis consequat lobortis.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo labore dolore quam dolores. Vero
+                odit quisquam provident dolores laborum! A qui illo excepturi praesentium nihil saepe explicabo? Dolore,
+                nihil dignissimos.
+              </p>
+            </a>
+            <a href="https://example.com" target="_blank" class="document-card">
+              <h2 class="document-name">Document 1</h2>
+              <p class="document-author">Author: John Doe</p>
+              <p class="document-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Sed euismod lacus non placerat tincidunt. Sed tristique
+                ligula quis consequat lobortis.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo labore dolore quam dolores. Vero
+                odit quisquam provident dolores laborum! A qui illo excepturi praesentium nihil saepe explicabo? Dolore,
+                nihil dignissimos.
+              </p>
+            </a>
+            <a href="https://example.com" target="_blank" class="document-card">
+              <h2 class="document-name">Document 2</h2>
+              <p class="document-author">Author: John Doe</p>
+              <p class="document-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Sed euismod lacus non placerat tincidunt. Sed tristique
+                ligula quis consequat lobortis.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo labore dolore quam dolores. Vero
+                odit quisquam provident dolores laborum! A qui illo excepturi praesentium nihil saepe explicabo? Dolore,
+                nihil dignissimos.
+              </p>
+            </a>
+            <a href="https://example.com" target="_blank" class="document-card">
+              <h2 class="document-name">Document 3</h2>
+              <p class="document-author">Author: John Doe</p>
+              <p class="document-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Sed euismod lacus non placerat tincidunt. Sed tristique
+                ligula quis consequat lobortis.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo labore dolore quam dolores. Vero
+                odit quisquam provident dolores laborum! A qui illo excepturi praesentium nihil saepe explicabo? Dolore,
+                nihil dignissimos.
+              </p>
+            </a>
+          </div>
+        </div>
+
+        <h1 class="title">
+          Created Documents
+        </h1>
+        <div class="scrollable-container">
+          <div class="tagged-doc">
+            <a href="https://example.com" target="_blank" class="document-card">
+              <h2 class="document-name">Document 1</h2>
+              <p class="document-author">Author: John Doe</p>
+              <p class="document-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Sed euismod lacus non placerat tincidunt. Sed tristique
+                ligula quis consequat lobortis.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo labore dolore quam dolores. Vero
+                odit quisquam provident dolores laborum! A qui illo excepturi praesentium nihil saepe explicabo? Dolore,
+                nihil dignissimos.
+              </p>
+            </a>
+            <a href="https://example.com" target="_blank" class="document-card">
+              <h2 class="document-name">Document 2</h2>
+              <p class="document-author">Author: John Doe</p>
+              <p class="document-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Sed euismod lacus non placerat tincidunt. Sed tristique
+                ligula quis consequat lobortis.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo labore dolore quam dolores. Vero
+                odit quisquam provident dolores laborum! A qui illo excepturi praesentium nihil saepe explicabo? Dolore,
+                nihil dignissimos.
+              </p>
+            </a>
+            <a href="https://example.com" target="_blank" class="document-card">
+              <h2 class="document-name">Document 3</h2>
+              <p class="document-author">Author: John Doe</p>
+              <p class="document-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Sed euismod lacus non placerat tincidunt. Sed tristique
+                ligula quis consequat lobortis.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo labore dolore quam dolores. Vero
+                odit quisquam provident dolores laborum! A qui illo excepturi praesentium nihil saepe explicabo? Dolore,
+                nihil dignissimos.
+              </p>
+            </a>
+            <a href="https://example.com" target="_blank" class="document-card">
+              <h2 class="document-name">Document 4</h2>
+              <p class="document-author">Author: John Doe</p>
+              <p class="document-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Sed euismod lacus non placerat tincidunt. Sed tristique
+                ligula quis consequat lobortis.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo labore dolore quam dolores. Vero
+                odit quisquam provident dolores laborum! A qui illo excepturi praesentium nihil saepe explicabo? Dolore,
+                nihil dignissimos.
+              </p>
+            </a>
+            <a href="https://example.com" target="_blank" class="document-card">
+              <h2 class="document-name">Document 1</h2>
+              <p class="document-author">Author: John Doe</p>
+              <p class="document-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Sed euismod lacus non placerat tincidunt. Sed tristique
+                ligula quis consequat lobortis.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo labore dolore quam dolores. Vero
+                odit quisquam provident dolores laborum! A qui illo excepturi praesentium nihil saepe explicabo? Dolore,
+                nihil dignissimos.
+              </p>
+            </a>
+            <a href="https://example.com" target="_blank" class="document-card">
+              <h2 class="document-name">Document 1</h2>
+              <p class="document-author">Author: John Doe</p>
+              <p class="document-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Sed euismod lacus non placerat tincidunt. Sed tristique
+                ligula quis consequat lobortis.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo labore dolore quam dolores. Vero
+                odit quisquam provident dolores laborum! A qui illo excepturi praesentium nihil saepe explicabo? Dolore,
+                nihil dignissimos.
+              </p>
+            </a>
+            <a href="https://example.com" target="_blank" class="document-card">
+              <h2 class="document-name">Document 1</h2>
+              <p class="document-author">Author: John Doe</p>
+              <p class="document-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Sed euismod lacus non placerat tincidunt. Sed tristique
+                ligula quis consequat lobortis.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo labore dolore quam dolores. Vero
+                odit quisquam provident dolores laborum! A qui illo excepturi praesentium nihil saepe explicabo? Dolore,
+                nihil dignissimos.
+              </p>
+            </a>
+            <a href="https://example.com" target="_blank" class="document-card">
+              <h2 class="document-name">Document 1</h2>
+              <p class="document-author">Author: John Doe</p>
+              <p class="document-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Sed euismod lacus non placerat tincidunt. Sed tristique
+                ligula quis consequat lobortis.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo labore dolore quam dolores. Vero
+                odit quisquam provident dolores laborum! A qui illo excepturi praesentium nihil saepe explicabo? Dolore,
+                nihil dignissimos.
+              </p>
+            </a>
+            <a href="https://example.com" target="_blank" class="document-card">
+              <h2 class="document-name">Document 2</h2>
+              <p class="document-author">Author: John Doe</p>
+              <p class="document-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Sed euismod lacus non placerat tincidunt. Sed tristique
+                ligula quis consequat lobortis.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo labore dolore quam dolores. Vero
+                odit quisquam provident dolores laborum! A qui illo excepturi praesentium nihil saepe explicabo? Dolore,
+                nihil dignissimos.
+              </p>
+            </a>
+            <a href="https://example.com" target="_blank" class="document-card">
+              <h2 class="document-name">Document 3</h2>
+              <p class="document-author">Author: John Doe</p>
+              <p class="document-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Sed euismod lacus non placerat tincidunt. Sed tristique
+                ligula quis consequat lobortis.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo labore dolore quam dolores. Vero
+                odit quisquam provident dolores laborum! A qui illo excepturi praesentium nihil saepe explicabo? Dolore,
+                nihil dignissimos.
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="forwarded-documents">
+        <h1 class="title">
+          Forwarded
+        </h1>
+        <div class="list-container">
+          <a href="https://example.com" target="_blank" class="list-item">
+            <div>
+              <h3 class="doc-title">Document 1</h3>
+              <p class="author-name">Author</p>
+            </div>
+          </a>
+          <a href="https://example.com" target="_blank" class="list-item">
+            <div>
+              <h3 class="doc-title">Document 2</h3>
+              <p class="author-name">Author</p>
+            </div>
+          </a>
+          <a href="https://example.com" target="_blank" class="list-item">
+            <div>
+              <h3 class="doc-title">Document 3</h3>
+              <p class="author-name">Author</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </section>
+  <script src="../logic/dashboard_script.js"></script>
+</body>
+
+</html>
+
+</html>

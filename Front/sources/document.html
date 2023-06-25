@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="document_styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Roboto:ital,wght@0,100;1,300&family=Rubik:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <div class="head">
+    <div class="titles">
+      <p class="title">Title</p>
+      <p class="project-name" .>Project Name</p>
+    </div>
+    <div class="created">
+      <p class="title">Created By</p>
+      <p class="project-name">Dr. Santosh Singh Rathore</p>
+    </div>
+    <div class="Status">
+      <p class="title">State</p>
+      <p class="project-name">Online</p>
+    </div>
+  </div>
+  <div class="checks">
+    <div class="checkmark">
+      <label for="rec" class="on-doc">Received</label>
+      <input type="checkbox" id="rec" name="interest" value="rec" class="check" />
+    </div>
+    <div class="checkmark">
+      <label for="for" class="on-doc">Forwarded</label>
+      <input type="checkbox" id="for" name="interest" value="for" class="check" />
+    </div>
+    <div class="checkmark">
+      <label for="apr" class="on-doc">Approved</label>
+      <input type="checkbox" id="apr" name="interest" value="apr" class="check" />
+    </div>
+  </div>
+  <div class="doc-desc">
+    <h2 class="do-desc">Description</h2>
+    <div class="main-doc-des">
+      <p class="para-desc">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta
+        possimus voluptates fugiat iusto voluptatem molestiae ratione
+        dignissimos maxime tenetur repellendus sit perspiciatis necessitatibus
+        ipsam quod nihil, architecto cumque maiores aut. Lorem ipsum dolor sit
+        amet consectetur adipisicing elit. Atque, iusto ex! Vel praesentium
+        voluptas labore ut similique explicabo assumenda voluptate repellendus
+        quasi reprehenderit, molestiae rem, quis earum? Beatae, architecto
+        nobis?Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+        Cupiditate consectetur in, nihil hic suscipit explicabo eum atque est.
+        Corporis consectetur iusto amet debitis officia voluptate illum.
+        Voluptatum culpa facere. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Ducimus deleniti provident adipisci consectetur
+        quibusdam veniam. Reiciendis quibusdam consectetur facere esse quasi
+        exercitationem animi at iste suscipit, accusamus, recusandae aut.
+        Alias.
+      </p>
+    </div>
+  </div>
+  <div class="Time">
+    <h2 class="do-desc">Timeline</h2>
+    <ul class="timeline" id="timeline">
+      <!-- <li class="li complete">
+          <div class="timestamp">
+            <span class="date">11-15-2014</span>
+          </div>
+          <div class="status">
+            <h4>Santosh Singh</h4>
+          </div>
+        </li> -->
+    </ul>
+    <form id="add-entry-form" onsubmit="addTimelineEntry(event)" autocomplete="off">
+      <select id="name-input">
+        <option value="" selected disabled>Select a name</option>
+        <option value="Santosh Singh">Santosh Singh</option>
+        <option value="Pramod Singh">Pramod Singh</option>
+        <option value="Shashikala Tapashwi">Shashikala Tapashwi</option>
+        <option value="KV Arya">KV Arya</option>
+      </select>
+      <!-- <input
+          type="text"
+          id="date-input"
+          placeholder="Enter a date (e.g., 11/15/2022)"
+          autocomplete="off"
+        /> -->
+      <button type="submit">Tag</button>
+    </form>
+  </div>
+  <script src="../logic/document_script.js"></script>
+  <script>
+    const handleLogout = () => {
+      console.log('running');
+
+      localStorage.removeItem('responseData');
+      isLogin();
+    }
+    const logout = document.getElementById('logout');
+    console.log(logout);
+    logout.addEventListener('click', handleLogout);
+  </script>
+</body>
+
+</html>

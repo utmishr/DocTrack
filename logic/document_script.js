@@ -34,6 +34,31 @@ var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
     dateInput.value = '';
   }
 }
+const token = JSON.parse(localStorage.getItem('responseData')).token;
+const url = window.location.href;
+const doc_id = url.split('?')[1].split('=')[1];
+console.log(doc_id);
+
+const get_document = (token,doc_id)=>{
+     fetch(`http://localhost:8000/api/document/accessDoc${doc_id}`,{
+      mode: 'cors',
+      method: 'GET',
+      headers: {
+          'authorization': `Bearer ${token}`,
+        'Content-Type': 'application/json'
+     }}).then(response => {
+      if (response.ok) {
+        return response.json();
+      } else {
+        throw new Error('Login failed');
+      }
+    }).then(info => {
+        console.log(info,'info');
+    });
+
+}
+
+get_document(token,doc_id);
 const isLogin = ()=>{
   if(!localStorage.getItem('responseData')){
        window.location.assign('../Login/index.html');

@@ -22,7 +22,7 @@ function searchDocuments() {
      
     return (
       `
-      <div target="_blank" class="document-card" id = ${id}>
+      <div target="_blank" class="document-card" doc_id = ${id}  id = 'doc_card'>
       <h2 class="document-name">${title}</h2>
       <p class="document-author">Author: ${author_name}</p>
       <p class="document-description">
@@ -109,19 +109,27 @@ const token = JSON.parse(localStorage.getItem('responseData')).token;
 
 get_all_tagged_documents(token);
 get_all_created_documents(token);
+function addproperties(){
+  var docs = document.querySelectorAll('#doc_card');
+  console.log(docs);
+  docs.forEach((doc)=>{
+    doc.addEventListener('click',()=>{
+      const doc_id = doc.getAttribute('doc_id');
+      console.log(doc_id);
+    
+      window.location.assign(`../sources/document.html?doc_id=${doc_id}`);
+    })
+  })
+}
 
+setTimeout(addproperties,500)
 
 
 
 
 
   // Handle click event on the window to clear the dropdown
-  window.addEventListener("click", function (event) {
-    var dropdown = document.getElementById("searchDropdown");
-    if (!event.target.matches("#searchInput")) {
-      dropdown.innerHTML = ""; // Clear the dropdown
-    }
-  });
+
 
   const isLogin = ()=>{
     if(!localStorage.getItem('responseData')){

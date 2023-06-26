@@ -17,24 +17,29 @@
   <div class="head">
     <div class="titles">
       <p class="title">Title</p>
-      <p class="project-name" .>Project Name</p>
+      <p class="project-name">Project Name</p>
     </div>
     <div class="created">
       <p class="title">Created By</p>
       <p class="project-name">Dr. Santosh Singh Rathore</p>
     </div>
     <div class="Status">
-      <p class="title">State</p>
-      <p class="project-name">Online</p>
+      <p class="title">Section</p>
+      <p class="project-name">Academics</p>
     </div>
   </div>
   <div class="checks">
     <div class="checkmark">
-      <label for="rec" class="on-doc">Received</label>
-      <input type="checkbox" id="rec" name="interest" value="rec" class="check" />
+      <label for="sig" class="on-doc">Signature</label>
+      <input type="text" id="sig" placeholder="Signature" />
+      
+    </div>
+    
+    <div class="sign-done">
+      <button id="sign-button">Submit</button>
     </div>
     <div class="checkmark">
-      <label for="for" class="on-doc">Forwarded</label>
+      <label for="for" class="on-doc">Mark As Done</label>
       <input type="checkbox" id="for" name="interest" value="for" class="check" />
     </div>
     <div class="checkmark">
@@ -94,17 +99,6 @@
     </form>
   </div>
   <script src="../logic/document_script.js"></script>
-  <script>
-    const handleLogout = () => {
-      console.log('running');
-
-      localStorage.removeItem('responseData');
-      isLogin();
-    }
-    const logout = document.getElementById('logout');
-    console.log(logout);
-    logout.addEventListener('click', handleLogout);
-  </script>
 </body>
 
 </html>

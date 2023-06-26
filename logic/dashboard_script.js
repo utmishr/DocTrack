@@ -18,11 +18,11 @@ function searchDocuments() {
       }
     }
   }
-  const documentCard = (title, author_name, description,id)=>{
+  const documentCard = (title, author_name, description,id, seen = true, tagId = null)=>{
      
     return (
       `
-      <div target="_blank" class="document-card" doc_id = ${id}  id = 'doc_card'>
+      <div target="_blank" class="${seen?'document-card':'highlighted_card'}" doc_id = ${id}  id = 'doc_card' tagId = ${tagId}  seen = ${seen}>
       <h2 class="document-name">${title}</h2>
       <p class="document-author">Author: ${author_name}</p>
       <p class="document-description">
@@ -32,7 +32,7 @@ function searchDocuments() {
       `
     )
   }
-
+var unseentags = [];
 const get_all_tagged_documents = async(token)=>{
   fetch('http://localhost:8000/api/document/tagged_doc',{
       mode: 'cors',
@@ -49,18 +49,19 @@ const get_all_tagged_documents = async(token)=>{
       }
     }).then(info => {
      const {data} = info;
-   var unseentags = [];
+
     for(let i = 0; i < data.length; i++){
     
          const {title,description} = data[i].document_id;
          if(data[i].seen == false){
+
           unseentags.push(data[i]);
          }
          console.log(data[i].seen);
          const author_name = data[i].document_id.createdBy.name;
          
          const doc_id = data[i].document_id.createdBy._id;
-    const card = documentCard(title,author_name,description,doc_id);
+    const card = documentCard(title,author_name,description,doc_id, data[i].seen,data[i]._id);
   //  here card is just string and hence we can't access its id property
   // it is not a dom element
   
@@ -118,9 +119,34 @@ function addproperties(){
   docs.forEach((doc)=>{
     doc.addEventListener('click',()=>{
       const doc_id = doc.getAttribute('doc_id');
-      console.log(doc_id);
-    
-      window.location.assign(`../sources/document.html?doc_id=${doc_id}`);
+      const tag_id = doc.getAttribute('tagId');
+      const seen = doc.getAttribute('seen');
+       console.log(doc_id);
+      if(tag_id != null && seen == 'false'){
+        fetch(`http://localhost:8000/api/document/seen${tag_id}`,{
+          mode: 'cors',
+          method: 'PATCH',
+          headers: {
+            'authorization': `Bearer ${token}`,
+            'Content-Type': 'application/json'
+          }
+        }).then(response => {
+        console.log('running');
+       
+          if (response.ok) {
+            return response.json();
+          } else {
+            throw new Error('Already seen');
+          }
+        }).then(info => {
+          console.log(info);
+          window.location.assign(`../sources/document.html?doc_id=${doc_id}`);
+        })
+      }else{
+        window.location.assign(`../sources/document.html?doc_id=${doc_id}`);
+      }
+     
+     
     })
   })
 }

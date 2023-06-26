@@ -62,17 +62,33 @@
         </div>
       </div>
       <div class="box">
-        <h2 class="name">Dr. Santosh Singh Rathore</h2>
+        <h2 class="name" id="usr_name">Dr. Santosh Singh Rathore</h2>
         <div class="about">
           <div class="things">
             <ul>
-              <li class="list"><span class="spanned">Department: </span><span id="department">Computer Science</span>
+              <li class="list">
+                <span class="spanned">Department: </span>
+                <span id="department" id="usr_depr">Computer Science</span>
               </li>
-              <li class="list"><span class="spanned">Honour: </span><span id="honour">Ph.D.</span></li>
-              <li class="list"><span class="spanned">Office Phone: </span><span id="phone">+91-9407203020</span></li>
-              <li class="list"><span class="spanned">Address: </span><span id="address">Room No. 214, F-Block,
-                  ABV-IIITM, Morena Link Road, Gwalior-474015 (M.P.)</span></li>
-              <li class="list"><span class="spanned">Email: </span><span id="email">santoshs@iiitm.ac.in</span></li>
+             
+              <li class="list">
+                <span class="spanned">Section: </span>
+                <span id="usr_sec">Academics</span>
+              </li>
+              <li class="list">
+                <span class="spanned">Designation: </span>
+                <span id="usr_depr">Professor</span>
+              </li>
+            
+              <!-- <li class="list">
+                <span class="spanned">Address: </span>
+                <span id="address">Room No. 214, F-Block,
+                  ABV-IIITM, Morena Link Road, Gwalior-474015 (M.P.)</span>
+              </li> -->
+              <li class="list">
+                <span class="spanned">Email: </span>
+                <span id="usr_email" >santoshs@iiitm.ac.in</span>
+              </li>
             </ul>
           </div>
           <div class="photo">
@@ -97,29 +113,26 @@
       </div>
       <div class="modal-body">
         <div>
-          <label for="departmentInput">Name:</label>
-          <input id="departmentInput" class="modal-input" type="text" placeholder="Enter department">
+          <label for="Name">Name:</label>
+          <input id="Name" class="modal-input" type="text" placeholder="Enter Name" autocomplete="off">
         </div>
         <div>
-          <label for="honourInput">Email:</label>
-          <input id="honourInput" class="modal-input" type="text" placeholder="Enter honour">
+          <label for="Email">Email:</label>
+          <input id="Email" class="modal-input" type="text" placeholder="Enter Email">
         </div>
         <div>
-          <label for="phoneInput">Section:</label>
-          <input id="phoneInput" class="modal-input" type="text" placeholder="Enter phone">
+          <label for="Section">Section:</label>
+          <input id="Section" class="modal-input" type="text" placeholder="Enter Section">
         </div>
         <div>
-          <label for="addressInput">Designation:</label>
-          <input id="addressInput" class="modal-input" type="text" placeholder="Enter address">
+          <label for="Designation">Designation:</label>
+          <input id="Designation" class="modal-input" type="text" placeholder="Enter Designation">
         </div>
         <div>
-          <label for="emailInput">Password:</label>
-          <input id="emailInput" class="modal-input" type="text" placeholder="Enter email">
+          <label for="Password">Password:</label>
+          <input id="Password" class="modal-input" type="text" placeholder="Enter Password">
         </div>
-        <div>
-          <label for="emailInput"> Confirm Password:</label>
-          <input id="emailInput" class="modal-input" type="text" placeholder="Enter email">
-        </div>
+
       </div>
       <div class="modal-buttons">
         <button id="saveButton" class="modal-button">Save</button>

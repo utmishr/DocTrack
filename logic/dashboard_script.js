@@ -49,11 +49,14 @@ const get_all_tagged_documents = async(token)=>{
       }
     }).then(info => {
      const {data} = info;
-   
+   var unseentags = [];
     for(let i = 0; i < data.length; i++){
     
          const {title,description} = data[i].document_id;
-       
+         if(data[i].seen == false){
+          unseentags.push(data[i]);
+         }
+         console.log(data[i].seen);
          const author_name = data[i].document_id.createdBy.name;
          
          const doc_id = data[i].document_id.createdBy._id;

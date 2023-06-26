@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
-    color: #fff;
+    color: white;
 margin:0;
 }
 html {
@@ -113,3 +113,126 @@ body {
     margin-bottom: 2rem;
     margin-left: 2rem;
   }
+
+
+
+
+.generate-seting-list{
+  font-size: 2rem;
+  margin-top:6rem;
+  margin-left: 3rem;
+}
+
+
+/* Add your existing styles here */
+
+/* Modal styles */
+/* Add your existing styles here */
+
+/* Modal styles */
+/* Modal styles */
+/* Modal styles */
+
+.pass-input{
+font-size: 1.6rem;
+margin-right: 2rem;
+}
+
+.generate-modal-content {
+  background-color: white;
+  color: black;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+  position: relative;
+  /* Remove the height property */
+  /* height: 80%; */
+  overflow-y: auto;
+}
+
+.generate-modal-content {
+  background-color: white;
+  color: black;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  height: 80%;
+  max-width: 400px;
+  position: relative;
+}
+
+.generate-close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.generate-close:hover,
+.generate-close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Button styles */
+#generate-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#generate-button:hover {
+  background-color: #45a049;
+}
+
+#password-submit {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#password-submit:hover {
+  background-color: #45a049;
+}
+
+/* Form styles */
+label {
+  color: black; 
+}
+
+input[type="password"],
+input[type="text"] {
+  color: black; 
+}
+
+
+.generate-modal-content {
+  background-color: white;
+  color: black;
+  /* ... */
+}
+
+#result-modal-content {
+  background-color: white;
+  color: black;
+  /* ... */
+}
+
+#generate-modal-data {
+  color: black;
+  word-wrap: break-word;
+  font-size: 1rem;
+
+}
+

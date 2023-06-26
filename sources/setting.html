@@ -6,9 +6,7 @@
   <link rel="stylesheet" href="setting_styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Roboto:ital,wght@0,100;1,300&family=Rubik:wght@400;500;600;700&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Roboto:ital,wght@0,100;1,300&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -56,19 +54,33 @@
       <h1 class="title">
         Settings
       </h1>
+      <div class="con">
+        <ul>
+          <li class="seting-list">
+            <button id="generate-button">Generate</button>
+          </li>
+        </ul>
+      </div>
     </section>
+    <div id="generate-modal" class="generate-modal">
+      <div class="generate-modal-content">
+        <span class="generate-close">&times;</span>
+        <form id="password-form">
+          <label for="password-input" class="pass-input">Enter Password:</label>
+          <input type="password" id="password-input" class="pass-input"/>
+          <button type="submit" id="password-submit">Submit</button>
+        </form>
+      </div>
+    </div>
+    
+    <div id="result-modal" class="generate-modal">
+      <div class="generate-modal-content">
+        <span class="generate-close">&times;</span>
+        <div id="generate-modal-data"></div>
+      </div>
+    </div>
     <script src="../logic/setting_script.js"></script>
-    <script>
-      const handleLogout = () => {
-        console.log('running');
-
-        localStorage.removeItem('responseData');
-        isLogin();
-      }
-      const logout = document.getElementById('logout');
-      console.log(logout);
-      logout.addEventListener('click', handleLogout);
-    </script>
+    
 </body>
 
 </html>
